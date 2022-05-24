@@ -1,15 +1,17 @@
 import React from 'react';
 import s from "./Error.module.css"
 
+
 type ErrorPropsType =  {
-   name: string
+   name?: string
+    img?:string
 }
 
 const Error:React.FC<ErrorPropsType> = (
-    {name, ...restProps}) => {
+    {name, img, ...restProps}) => {
     return (
         <div className={s.error}>
-            {name}
+            <img src={img} alt=""/>
         </div>
     );
 };
