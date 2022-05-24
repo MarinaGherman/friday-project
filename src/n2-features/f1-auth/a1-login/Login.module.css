@@ -1,0 +1,12 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.checkboxBlock {
+    display: flex;
+}
+input {
+    margin-bottom: 20px;
+}

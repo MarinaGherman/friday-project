@@ -1,5 +1,5 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes} from 'react'
-import s from './SuperCheckbox.module.css'
+
 
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -20,12 +20,11 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     }
 ) => {
     return (
-        <label>
             <input
                 type={'checkbox'}
                 {...restProps}
             />
-        </label>
+
     )
 }
 

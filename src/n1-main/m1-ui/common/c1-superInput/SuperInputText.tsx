@@ -5,10 +5,9 @@ import s from './SuperInputText.module.css'
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperInputTextPropsType = DefaultInputPropsType & {
-    onChangeText?: (value: string) => void
-    onEnter?: () => void
     error?: string
     spanClassName?: string
+    placeholder?: string
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
@@ -16,6 +15,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         type,
         error,
         className,
+        placeholder,
         ...restProps
     }
 ) => {
@@ -24,9 +24,9 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
             <input
                 type={'text'}
                 className={s.superInput}
+                placeholder={placeholder}
                 {...restProps}
             />
-            {error && <span>{error}</span>}
         </>
     )
 }
