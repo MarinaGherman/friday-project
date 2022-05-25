@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {ERROR_PATH, LOGIN_PATH, PROFILE_PATH, REGISTERED_PATH, SET_PASS_PATH} from "../../routes/Routers";
+import {ERROR_PATH, LOGIN_PATH, PROFILE_PATH, REGISTERED_PATH, SET_PASS_PATH} from "../routes/Routers";
 import s from "./Header.module.css"
 
 const Header = () => {

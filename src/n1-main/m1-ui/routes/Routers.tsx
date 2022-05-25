@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes} from "react-router-dom";
 import LoginContainer from "../../../n2-features/f1-auth/a1-login/l1-ui/LoginContainer";
-import ErrorContainer from "../common/error/ErrorContainer";
+import ErrorContainer from "../../../n0-common/c5-superError/ErrorContainer";
 import RegisterFormContainer from "../../../n2-features/f1-auth/a2-register/r1-ui/RegisterFormContainer";
 import SetPassContainer from "../../../n2-features/f1-auth/a3-setPass/s1-ui/SetPassContainer";
 import ProfileContainer from "../../../n2-features/f1-auth/a5-profile/p1-ui/ProfileContainer";
@@ -9,7 +9,7 @@ import ProfileContainer from "../../../n2-features/f1-auth/a5-profile/p1-ui/Prof
 
 export const LOGIN_PATH = '/login';
 export const REGISTERED_PATH = '/registered';
-export const ERROR_PATH = '/error';
+export const ERROR_PATH = '/c5-superError';
 export const SET_PASS_PATH = '/set-password';
 export const PROFILE_PATH = '/profile';
 
