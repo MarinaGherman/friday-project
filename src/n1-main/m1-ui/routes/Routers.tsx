@@ -3,6 +3,7 @@ import { Route, Routes} from "react-router-dom";
 import LoginContainer from "../../../n2-features/f1-auth/a1-login/l1-ui/LoginContainer";
 import ErrorContainer from "../common/error/ErrorContainer";
 import RegisterFormContainer from "../../../n2-features/f1-auth/a2-register/r1-ui/RegisterFormContainer";
+import SetPassContainer from "../../../n2-features/f1-auth/a3-setPass/s1-ui/SetPassContainer";
 
 
 export const LOGIN_PATH = '/login';
@@ -18,7 +19,7 @@ const Routers: React.FC = () => {
                 <Route path={LOGIN_PATH} element={<LoginContainer/>}/>
                 <Route path={ERROR_PATH} element={<ErrorContainer/>}/>
                 <Route path={REGISTERED_PATH} element={<RegisterFormContainer/>}/>
-                <Route path={SET_PASS} element={<RegisterFormContainer/>}/>
+                <Route path={SET_PASS} element={<SetPassContainer/>}/>
             </Routes>
         </>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {ERROR_PATH, LOGIN_PATH, REGISTERED_PATH} from "../../routes/Routers";
+import {ERROR_PATH, LOGIN_PATH, REGISTERED_PATH, SET_PASS} from "../../routes/Routers";
 import s from "./Header.module.css"
 
 const Header = () => {
@@ -9,6 +9,7 @@ const Header = () => {
 
             <NavLink to={LOGIN_PATH}>Login</NavLink>
             <NavLink to={REGISTERED_PATH}>Register</NavLink>
+            <NavLink to={SET_PASS}>SetPass</NavLink>
             <NavLink to={ERROR_PATH}>404</NavLink>
         </div>
     );
