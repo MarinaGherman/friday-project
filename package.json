@@ -16,6 +16,7 @@
     "axios": "^0.27.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
@@ -30,12 +31,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -52,6 +47,8 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/redux-thunk": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^7.0.1",
     "gh-pages": "^4.0.0"
   }
 }

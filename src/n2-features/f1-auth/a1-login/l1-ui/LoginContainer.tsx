@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Login from "./l2-Login";
-import {LOGIN_PATH} from "../../../n1-main/m1-ui/routes/Routers";
+import Login from "./Login";
+import {LOGIN_PATH} from "../../../../n1-main/m1-ui/routes/Routers";
 
 const LoginContainer = () => {
     return (

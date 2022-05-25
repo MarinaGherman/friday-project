@@ -1,26 +1,24 @@
 import React from 'react';
 import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
 import s from './App.module.css'
-import Routers from "./routes/Routers";
-import Header from "./header/Header";
+import store from "../m2-bll/store";
+import Main from "./Main/Main";
 
 
-function App() {
+const App = () => {
 
   return (
       <div className={s.app}>
           <div className={s.container}>
               <BrowserRouter>
-                  {/*<Provider store={store}>*/}
-                  <Header/>
-                  <Routers/>
-                  {/*</Provider>*/}
+                  <Provider store={store}>
+                      <Main/>
+                  </Provider>
               </BrowserRouter>
           </div>
       </div>
-
-
-  );
+  )
 }
 
 export default App;
