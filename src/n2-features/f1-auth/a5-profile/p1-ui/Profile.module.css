@@ -1,0 +1,10 @@
+.profileBlock {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+img {
+    width: 200px;
+    border-radius: 10px;
+}

@@ -2,13 +2,14 @@ import React, {DetailedHTMLProps, InputHTMLAttributes} from 'react'
 import s from './SuperInputText.module.css'
 
 
-type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-
-type SuperInputTextPropsType = DefaultInputPropsType & {
+export type SuperInputTextPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
     error?: string
     spanClassName?: string
     placeholder?: string
+    onBlur?: any
 }
+
+
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
     {
@@ -16,6 +17,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         error,
         className,
         placeholder,
+        onBlur,
         ...restProps
     }
 ) => {
