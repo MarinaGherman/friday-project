@@ -1,15 +1,15 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import Login from "./Login";
-import {LOGIN_PATH} from "../../../../n1-main/m1-ui/routes/Routers";
+import Login, {LoginInputs} from "./Login";
 
 const LoginContainer = () => {
+
+    const handleSubmit = (values: LoginInputs) => {
+        console.log(values)
+    }
+
     return (
         <div>
-            <Link to={LOGIN_PATH}>
-                <Login/>
-            </Link>
-
+            <Login onSubmit={handleSubmit} />
         </div>
     );
 };
