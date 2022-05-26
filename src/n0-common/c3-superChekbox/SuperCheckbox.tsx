@@ -9,20 +9,11 @@ type SuperCheckboxPropsType = DefaultInputPropsType & {
     spanClassName?: string
 }
 
-const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
-    {
-        type,
-        onChange, onChangeChecked,
-        className, spanClassName,
-        children,
-
-        ...restProps
-    }
-) => {
+const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (props) => {
     return (
             <input
                 type={'checkbox'}
-                {...restProps}
+                {...props}
             />
 
     )

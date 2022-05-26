@@ -24,7 +24,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     return (
         <>
             <input
-                type={'text'}
+                type={type || 'text'}
                 className={s.superInput}
                 placeholder={placeholder}
                 onBlur={onBlur}
