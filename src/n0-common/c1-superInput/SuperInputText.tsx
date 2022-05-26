@@ -1,4 +1,4 @@
-import React, {DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import React, {DetailedHTMLProps, FocusEventHandler, InputHTMLAttributes} from 'react'
 import s from './SuperInputText.module.css'
 
 
@@ -6,7 +6,7 @@ export type SuperInputTextPropsType = DetailedHTMLProps<InputHTMLAttributes<HTML
     error?: string
     spanClassName?: string
     placeholder?: string
-    onBlur?: any
+    onBlur?: FocusEventHandler<HTMLInputElement>;
 }
 
 
@@ -27,6 +27,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 type={'text'}
                 className={s.superInput}
                 placeholder={placeholder}
+                onBlur={onBlur}
                 {...restProps}
             />
         </>

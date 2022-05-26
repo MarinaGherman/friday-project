@@ -1,7 +1,7 @@
 import React, {
+    KeyboardEvent,
     DetailedHTMLProps,
     HTMLAttributes,
-    InputHTMLAttributes,
     useState
 } from 'react';
 import SuperInputText, {SuperInputTextPropsType} from "../c1-superInput/SuperInputText";
@@ -12,17 +12,20 @@ export type SuperEditableSpanType = SuperInputTextPropsType & {
     spanProps?: EditableSpanType;
 };
 
-const SuperEditableSpan:React.FC<SuperEditableSpanType> = ({onBlur, ...props}) => {
+const SuperEditableSpan:React.FC<SuperEditableSpanType> = ({ onChange, onBlur, ...props}) => {
     const [editMode, setEditMode] = useState<boolean>(false);
 
-    const onEditMode = (e: React.MouseEvent<HTMLSpanElement, MouseEvent> ) => {
+    const handleSpanDoubleClick = () => {
         setEditMode(true)
-        onBlur && onBlur(e)
+    }
+    const handleOnBlur = () => {
+        setEditMode(false)
     }
 
-    const offEditMode = (e: InputHTMLAttributes<HTMLInputElement>) => {
-        setEditMode(false)
-        onBlur && onBlur(e)
+    const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === "Enter") {
+            setEditMode(false)
+        }
     }
 
     return (
@@ -30,10 +33,14 @@ const SuperEditableSpan:React.FC<SuperEditableSpanType> = ({onBlur, ...props}) =
             {
                 editMode ? (
                     <SuperInputText
-                        onBlur={offEditMode}
+                        autoFocus
+                        value={props.value}
+                        onChange={onChange}
+                        onBlur={handleOnBlur}
+                        onKeyDown={handleKeyPress}
                     />
                 ) : (
-                    <span onDoubleClick={onEditMode}>
+                    <span onDoubleClick={handleSpanDoubleClick}>
                         {props.value}
                     </span>
                 )
