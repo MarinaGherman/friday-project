@@ -32,6 +32,12 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -47,7 +53,7 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/redux-thunk": "^2.1.0",
-    "eslint": "^5.16.0",
+    "eslint": "^8.16.0",
     "eslint-config-react-app": "^7.0.1",
     "gh-pages": "^4.0.0"
   }
