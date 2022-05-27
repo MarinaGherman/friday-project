@@ -1,11 +1,11 @@
 
 export type LoginStateType = {
-    loading: boolean;
+    login: boolean;
 
 }
 
 export const loginInitState: LoginStateType = {
-    loading: false,
+    login: false,
 
 };
 
@@ -15,7 +15,7 @@ export const LoginReducer = (state = loginInitState, action: LoginACType): Login
         case "login/SET_LOADING": {
             return {
                 ...state,
-                loading: action.loading,
+                login: action.login,
             }
         }
         default: {
@@ -24,8 +24,8 @@ export const LoginReducer = (state = loginInitState, action: LoginACType): Login
     }
 };
 
-const LoginAC = (loading:boolean): any => {
-    return {type: "login/SET_LOADING",loading} as const
+const LoginAC = (login:boolean): any => {
+    return {type: "login/SET_LOADING",login} as const
 }
 
 export type LoginACType = ReturnType<typeof LoginAC>
